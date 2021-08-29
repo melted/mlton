@@ -92,4 +92,4 @@ jobs:
       - name: Build (windows)
         run: c:\msys64\usr\bin\bash -l -c "cd $env:PWD && make OLD_MLTON_RUNTIME_ARGS='ram-slop 0.90' MLTON_RUNTIME_ARGS='ram-slop 0.90' MLTON_COMPILE_ARGS='-codegen amd64' WITH_DBG_RUNTIME=false all"
       - name: Test (windows)
-        run: c:\msys64\usr\bin\bash -l -c "cd $env:PWD && ./bin/regression -codegen amd64"
+        run: c:\msys64\usr\bin\bash -l -c "cd $env:PWD && ./bin/regression -codegen amd64 && echo 'hiho'"
